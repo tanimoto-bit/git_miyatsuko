@@ -1,0 +1,380 @@
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from load at C:/Ruby24-x64/bin/rake:23)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (31.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (28.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to UpdateSchema1 (20190430055243)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (7.1ms)[0m  [1m[35mCREATE TABLE "employees" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "emp_id" varchar, "name" varchar, "age" integer, "address" varchar, "busho" varchar, "created_at" datetime, "updated_at" datetime)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190430055243"]]
+  [1m[35m (25.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (6.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-04-30 08:34:04.992903"], ["updated_at", "2019-04-30 08:34:04.992903"]]
+  [1m[35m (24.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from instance_eval at C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.3/lib/active_support/lazy_load_hooks.rb:71)
+Started GET "/" for ::1 at 2019-04-30 17:36:26 +0900
+Started GET "/" for ::1 at 2019-04-30 17:36:26 +0900
+Processing by RoutesController#index as HTML
+Processing by RoutesController#index as HTML
+  Rendering routes/index.html.erb within layouts/application
+  Rendering routes/index.html.erb within layouts/application
+  Rendered routes/index.html.erb within layouts/application (74.0ms)
+  Rendered routes/index.html.erb within layouts/application (4.1ms)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename C:/rails/miyatsuko_test1/app/assets/stylesheets/_variables.css.scss to C:/rails/miyatsuko_test1/app/assets/stylesheets/_variables.scss. (called from _app_views_layouts_application_html_erb__173299304_30721680 at C:/rails/miyatsuko_test1/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename C:/rails/miyatsuko_test1/app/assets/stylesheets/_variables.css.scss to C:/rails/miyatsuko_test1/app/assets/stylesheets/_variables.scss. (called from _app_views_layouts_application_html_erb__173299304_30721680 at C:/rails/miyatsuko_test1/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename C:/rails/miyatsuko_test1/app/assets/stylesheets/_bootstrap_overrides.css.scss to C:/rails/miyatsuko_test1/app/assets/stylesheets/_bootstrap_overrides.scss. (called from _app_views_layouts_application_html_erb__173299304_30721680 at C:/rails/miyatsuko_test1/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename C:/rails/miyatsuko_test1/app/assets/stylesheets/_bootstrap_overrides.css.scss to C:/rails/miyatsuko_test1/app/assets/stylesheets/_bootstrap_overrides.scss. (called from _app_views_layouts_application_html_erb__173299304_30721680 at C:/rails/miyatsuko_test1/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename C:/rails/miyatsuko_test1/app/assets/stylesheets/_variables.css.scss to C:/rails/miyatsuko_test1/app/assets/stylesheets/_variables.scss. (called from _app_views_layouts_application_html_erb__173299304_30721680 at C:/rails/miyatsuko_test1/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename C:/rails/miyatsuko_test1/app/assets/stylesheets/_variables.css.scss to C:/rails/miyatsuko_test1/app/assets/stylesheets/_variables.scss. (called from _app_views_layouts_application_html_erb__173299304_30721680 at C:/rails/miyatsuko_test1/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename C:/rails/miyatsuko_test1/app/assets/stylesheets/_bootstrap_overrides.css.scss to C:/rails/miyatsuko_test1/app/assets/stylesheets/_bootstrap_overrides.scss. (called from _app_views_layouts_application_html_erb__173299304_30721680 at C:/rails/miyatsuko_test1/app/views/layouts/application.html.erb:5)
+DEPRECATION WARNING: Extra .css in SCSS file is unnecessary. Rename C:/rails/miyatsuko_test1/app/assets/stylesheets/_bootstrap_overrides.css.scss to C:/rails/miyatsuko_test1/app/assets/stylesheets/_bootstrap_overrides.scss. (called from _app_views_layouts_application_html_erb__173299304_30721680 at C:/rails/miyatsuko_test1/app/views/layouts/application.html.erb:5)
+Completed 500 Internal Server Error in 69260ms
+
+
+  
+ActionView::Template::Error (can't add a new key into hash during iteration):
+    2: <html>
+    3: <head>
+    4:   <title>MiyatsukoTest1</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  
+app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__173299304_30721680'
+Started GET "/" for ::1 at 2019-04-30 17:38:12 +0900
+Processing by RoutesController#index as HTML
+  Rendering routes/index.html.erb within layouts/application
+  Rendered routes/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 174241ms (Views: 173803.7ms)
+
+
+Completed 200 OK in 122156ms (Views: 121735.1ms)
+
+
+Started GET "/" for ::1 at 2019-04-30 17:41:54 +0900
+Processing by RoutesController#index as HTML
+  Rendering routes/index.html.erb within layouts/application
+  Rendered routes/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 5043ms (Views: 4630.0ms)
+
+
+Started GET "/assets/application.self-0c15bf7a784925b819e53e5366bf3465e9846625948b958c8ca3cf302c61e813.css?body=1" for ::1 at 2019-04-30 17:42:01 +0900
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for ::1 at 2019-04-30 17:42:01 +0900
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for ::1 at 2019-04-30 17:42:01 +0900
+Started GET "/assets/jquery-ui/version.self-c8e3d1203da26ea7efdf83c1eabb3f0ba55cb68e463f5ccf0d77bd15ce6a8e61.js?body=1" for ::1 at 2019-04-30 17:42:03 +0900
+Started GET "/assets/jquery-ui/data.self-2067c82e6fe39a9cba5623206a5dc28d5c60d26b95cd100855b78cacf72865b8.js?body=1" for ::1 at 2019-04-30 17:42:03 +0900
+Started GET "/assets/jquery-ui/disable-selection.self-5675f71f2fbbc6857ea700ba843af748b50dbc0150cc87932a7d05ec016bb659.js?body=1" for ::1 at 2019-04-30 17:42:03 +0900
+Started GET "/assets/jquery-ui/focusable.self-426e99e67d1f1bd4cb444fd878ee63a6de1f5d1d61451e43022c86214b9eec64.js?body=1" for ::1 at 2019-04-30 17:42:06 +0900
+Started GET "/assets/jquery-ui/form.self-711978b53107be2d9ef1b7369beb151b229cefa8c1405a056d3c34262d5b477e.js?body=1" for ::1 at 2019-04-30 17:42:06 +0900
+Started GET "/assets/jquery-ui/ie.self-163eb039dcb1e0c3471b7d91386eabb8753da6906e84824c019f9ff56bdb83a6.js?body=1" for ::1 at 2019-04-30 17:42:07 +0900
+Started GET "/assets/jquery-ui/keycode.self-ad63cd20acf49dd333bbbc537454d7d475bd610eb5b88de0dca009f0c3d314b1.js?body=1" for ::1 at 2019-04-30 17:42:07 +0900
+Started GET "/assets/jquery-ui/escape-selector.self-43e4d61501e4ffb1ecba387affbae1eb3e1c863ab0b0e71897851cddd246e50e.js?body=1" for ::1 at 2019-04-30 17:42:07 +0900
+Started GET "/assets/jquery-ui/labels.self-c0448a3cb597a9a9429be814ab0e9ed2a14d85604555b4cff897adf3f0415f38.js?body=1" for ::1 at 2019-04-30 17:42:07 +0900
+Started GET "/assets/jquery-ui/jquery-1-7.self-22c197e38fc01a29431530c4c5c7263e26d2b611994b1f9c5c8c900a97b4bc44.js?body=1" for ::1 at 2019-04-30 17:42:11 +0900
+Started GET "/assets/jquery-ui/plugin.self-d8f576c8e073ca51f095505f47bd09d306b875404cd90afcbb6338287cfb0247.js?body=1" for ::1 at 2019-04-30 17:42:11 +0900
+Started GET "/assets/jquery-ui/safe-active-element.self-a1f1a1a7dae3269ce03f6fffb2dcc9b4a7490f5d546c65d54417bec3be24b668.js?body=1" for ::1 at 2019-04-30 17:42:12 +0900
+Started GET "/assets/jquery-ui/safe-blur.self-2cc24c46132d51c7724f6371154241b0a81c9bae5d5681d8f62b01ce46236726.js?body=1" for ::1 at 2019-04-30 17:42:14 +0900
+Started GET "/assets/jquery-ui/scroll-parent.self-38e26a71a450a29fb63425e8f589a7046862f927eb0a1dbf6a6c44da05196d2e.js?body=1" for ::1 at 2019-04-30 17:42:14 +0900
+Started GET "/assets/jquery-ui/tabbable.self-f3f62ceed772d3a325cebd6a03221f8a8cb02c6150f4feba738c6525a2953690.js?body=1" for ::1 at 2019-04-30 17:42:15 +0900
+Started GET "/assets/jquery-ui/unique-id.self-66e85ac85cd0b6b8b1bb89369fc65f608f716869dc0930862a8d421a57a9580a.js?body=1" for ::1 at 2019-04-30 17:42:17 +0900
+Started GET "/assets/jquery-ui/core.self-886760af898381620a8980841c646ae70e894b5292c3138e6dfd75b6904deffb.js?body=1" for ::1 at 2019-04-30 17:42:18 +0900
+Started GET "/assets/jquery-ui/effect.self-776455da1682afff3a4974146aa96ca840597b879ed3797af0604063527443c6.js?body=1" for ::1 at 2019-04-30 17:42:18 +0900
+Started GET "/assets/jquery-ui/form-reset-mixin.self-3a447942586b5719fdd7f1d1a3ac0da9e757a0eb8f4a7cb145f6deb820d2dc54.js?body=1" for ::1 at 2019-04-30 17:42:18 +0900
+Started GET "/assets/jquery-ui/position.self-1b49c8c521e67a4a88bfdad6b4d944d33686d25009a0e40a1e170acdd7b6962a.js?body=1" for ::1 at 2019-04-30 17:42:19 +0900
+Started GET "/assets/jquery-ui/widget.self-fca20bcec06d192f97cffa6e734e24360e227237b8ae7d7e7e60754df7d5444f.js?body=1" for ::1 at 2019-04-30 17:42:20 +0900
+Started GET "/assets/jquery-ui/effects/effect-blind.self-2f8923f5c3073717dad35ac1f9bd4dbc13d2f9c8128f7dbea9819921338271f4.js?body=1" for ::1 at 2019-04-30 17:42:22 +0900
+Started GET "/assets/jquery-ui/effects/effect-bounce.self-ca3686abc7c667b5380422af36b618923c2fc8e901b3eb2ff627f1cdef60486a.js?body=1" for ::1 at 2019-04-30 17:42:23 +0900
+Started GET "/assets/jquery-ui/effects/effect-clip.self-9e606afd1b0d1679f42b1ce5c2ad29f242ed98a9b1a473a9ef8a8bf10df2afe4.js?body=1" for ::1 at 2019-04-30 17:42:24 +0900
+Started GET "/assets/jquery-ui/effects/effect-drop.self-481600061a28b5621b1d78187468e63f057665ce6af6401db851f9b79e345965.js?body=1" for ::1 at 2019-04-30 17:42:24 +0900
+Started GET "/assets/jquery-ui/effects/effect-explode.self-b5f68a634df4bc19111474eb15bcd99597dc19c721b33647fbb04f2bb6d52ca3.js?body=1" for ::1 at 2019-04-30 17:42:24 +0900
+Started GET "/assets/jquery-ui/effects/effect-fade.self-60febf4d2a1f6f013852a42da59c74d840f205715162a2b11e734fd4dd73a519.js?body=1" for ::1 at 2019-04-30 17:42:26 +0900
+Started GET "/assets/jquery-ui/effects/effect-fold.self-78adc6cc7f2d8dac25e8c82164ae61cc3160bb5280ed3d24dd96a576e37a6e46.js?body=1" for ::1 at 2019-04-30 17:42:26 +0900
+Started GET "/assets/jquery-ui/effects/effect-highlight.self-842a0db414abed8fbccb48908bd933b32c93c6b9d725160c85dc2bde708fa753.js?body=1" for ::1 at 2019-04-30 17:42:29 +0900
+Started GET "/assets/jquery-ui/effects/effect-size.self-2094878ac7ba38dcd4539cd4595fa4d6ed7182be8bb6f03785684a5e470a293d.js?body=1" for ::1 at 2019-04-30 17:42:29 +0900
+Started GET "/assets/jquery-ui/effects/effect-scale.self-88872e591cdbf30b3d09946e82e96e25bcd99b03857ead844a503301e6de71f3.js?body=1" for ::1 at 2019-04-30 17:42:29 +0900
+Started GET "/assets/jquery-ui/effects/effect-puff.self-be0ba8a98762bf10054deb4e8bdf92c44de0d570714624d16c396f1ffe3a82d6.js?body=1" for ::1 at 2019-04-30 17:42:31 +0900
+Started GET "/assets/jquery-ui/effects/effect-pulsate.self-bf83d1979be265f242fceb95cc3cfeca5467e4aab9cdea27ebb6f2e17bdaae2e.js?body=1" for ::1 at 2019-04-30 17:42:32 +0900
+Started GET "/assets/jquery-ui/effects/effect-shake.self-867270f4e72f7895d38b10fdf9a6ba20f22bee88ac4d79654a9227c14141e1ca.js?body=1" for ::1 at 2019-04-30 17:42:32 +0900
+Started GET "/assets/jquery-ui/effects/effect-slide.self-b59b0b36df7b3e5e4f4190ab51e5c212744d2b34d5ed14c96bfe9c8a3096c00b.js?body=1" for ::1 at 2019-04-30 17:42:33 +0900
+Started GET "/assets/jquery-ui/effects/effect-transfer.self-5ab6d30ecb0b73e2b9a528f6d66c0732ba43a93a5326d88dae547f0c7c759e79.js?body=1" for ::1 at 2019-04-30 17:42:34 +0900
+Started GET "/assets/jquery-ui/widgets/accordion.self-267aabfe487e53fce0399a77f9030a87b9d8a409eb30c4c85c5637da9ac35429.js?body=1" for ::1 at 2019-04-30 17:42:36 +0900
+Started GET "/assets/jquery-ui/widgets/menu.self-0730fe713007bd93e6db569352a20ed92448299505ff6f525bc0dc6dd488254e.js?body=1" for ::1 at 2019-04-30 17:42:36 +0900
+Started GET "/assets/jquery-ui/widgets/autocomplete.self-6a89d7a43741ec810ef95de143a7c0297e2e4368ebecff64493ebb7a9ac3a524.js?body=1" for ::1 at 2019-04-30 17:42:37 +0900
+Started GET "/assets/jquery-ui/widgets/controlgroup.self-0b7409f97114a33de116bd5429e9df199cbdea3f276d8bd725c4c2c60f244711.js?body=1" for ::1 at 2019-04-30 17:42:38 +0900
+Started GET "/assets/jquery-ui/widgets/checkboxradio.self-60f68cb16012ef210c931076ada2d65d54a8c74a2dc71ce383af758460f8b686.js?body=1" for ::1 at 2019-04-30 17:42:39 +0900
+Started GET "/assets/jquery-ui/widgets/button.self-659b51f6fb5303f90ed8cf551509063770a50168a15795ba834b08f8bf2e0ce0.js?body=1" for ::1 at 2019-04-30 17:42:40 +0900
+Started GET "/assets/jquery-ui/widgets/datepicker.self-2af0dec09da99d687c31fc224e940687a4eb3694e7b38b0871bba475cad86120.js?body=1" for ::1 at 2019-04-30 17:42:41 +0900
+Started GET "/assets/jquery-ui/widgets/mouse.self-f0790a202dcf54fab051e71b042335d5346f9cceb0f645223c1dab93f349a04b.js?body=1" for ::1 at 2019-04-30 17:42:42 +0900
+Started GET "/assets/jquery-ui/widgets/draggable.self-42c3eda0b49f105628cea7580fe38c7ed77467cee384bb2c4e095a2bd0a172e6.js?body=1" for ::1 at 2019-04-30 17:42:42 +0900
+Started GET "/assets/jquery-ui/widgets/resizable.self-1a46c2f5b876918e02bf979080e56f57846590cd880721bca5058e84f7f60bae.js?body=1" for ::1 at 2019-04-30 17:42:43 +0900
+Started GET "/assets/jquery-ui/widgets/dialog.self-2bd687f9580c0be4213c50b4bb1211c28ceedb045eba954e63d40bfbb4d1affd.js?body=1" for ::1 at 2019-04-30 17:42:43 +0900
+Started GET "/assets/jquery-ui/widgets/droppable.self-4e3be0d7524dd1852e3b37ae00cd0c351c6178bcad39b17315cca941ddd44148.js?body=1" for ::1 at 2019-04-30 17:42:46 +0900
+Started GET "/assets/jquery-ui/widgets/progressbar.self-3bf965ce4e8ade2f07336ae5ffce7fe58897333238561761ffcb16f31af673fc.js?body=1" for ::1 at 2019-04-30 17:42:46 +0900
+Started GET "/assets/jquery-ui/widgets/selectable.self-a364da09c555890f5bb64704711594a88e94988edb285735bda59431a749226e.js?body=1" for ::1 at 2019-04-30 17:42:48 +0900
+Started GET "/assets/jquery-ui/widgets/selectmenu.self-43e0fc6b5fba037933a7d89a5b2a7127aa9c7494cc605c2dcd3146265e2d3d35.js?body=1" for ::1 at 2019-04-30 17:42:49 +0900
+Started GET "/assets/jquery-ui/widgets/slider.self-f166e8b345d6a2376ab8f43b05ab7629016706df83f2d96113cf5d8905c3d028.js?body=1" for ::1 at 2019-04-30 17:42:49 +0900
+Started GET "/assets/jquery-ui/widgets/sortable.self-6e5e1f07a29b5a89ec1d359363d2800904e3ae548a38ab2f8eded36746d1adbe.js?body=1" for ::1 at 2019-04-30 17:42:51 +0900
+Started GET "/assets/jquery-ui/widgets/spinner.self-2769386b6b06e175a13ccdcd6d2d0cd40c45cec19607bcb818cee0704c165557.js?body=1" for ::1 at 2019-04-30 17:42:51 +0900
+Started GET "/assets/jquery-ui/widgets/tabs.self-b7f60535e992224ca66c3f11dc943eba9ef42a9605241e27b9dba24c7efb287e.js?body=1" for ::1 at 2019-04-30 17:42:51 +0900
+Started GET "/assets/jquery-ui/widgets/tooltip.self-50ae9488af573c99a78b60209bce5c7a4affc4e175fef523942acb163dd8deb8.js?body=1" for ::1 at 2019-04-30 17:42:51 +0900
+Started GET "/assets/jquery-ui.self-d4c1ae19d9b853ec1c8c83784fa979bbe4075a84932a080bbd7d7706240410e1.js?body=1" for ::1 at 2019-04-30 17:42:55 +0900
+Started GET "/assets/bootstrap.self-cdea7efeac1597b89ddd6fd86b0e8e0bec5d5fb1fac9c6e8a045f2c59eef2d13.js?body=1" for ::1 at 2019-04-30 17:42:55 +0900
+Started GET "/assets/application.self-f2b5b9cbe9166fcd551c3f4e3faf08edf2de70ef4a8af0731e6113582c1d1e86.js?body=1" for ::1 at 2019-04-30 17:42:56 +0900
+Started GET "/employees" for ::1 at 2019-04-30 17:43:12 +0900
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (96.1ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  Rendered employees/index.html.erb within layouts/application (340.2ms)
+Completed 200 OK in 8039ms (Views: 5119.1ms | ActiveRecord: 111.8ms)
+
+
+Started GET "/employees/new" for ::1 at 2019-04-30 17:43:30 +0900
+Processing by EmployeesController#new as HTML
+  Rendering employees/new.html.erb within layouts/application
+  Rendered employees/new.html.erb within layouts/application (287.2ms)
+Completed 200 OK in 5422ms (Views: 4915.4ms | ActiveRecord: 6.0ms)
+
+
+Started POST "/employees" for ::1 at 2019-04-30 17:44:47 +0900
+Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"P5NET6BkpY8lrQErYb61zJI4OKwFCU94b/tJkpRohGoytzL5mRlJGkt5QA/P3nCzqls6mw7FhD81a/cMxTeF0w==", "employee"=>{"emp_id"=>"10001", "name"=>"田中ルビー", "age"=>"34", "address"=>"", "busho"=>"営業部"}, "commit"=>"保存"}
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEmployee Create (15.0ms)[0m  [1m[32mINSERT INTO "employees" ("emp_id", "name", "age", "address", "busho", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["emp_id", "10001"], ["name", "田中ルビー"], ["age", 34], ["address", ""], ["busho", "営業部"], ["created_at", "2019-04-30 08:44:48.324430"], ["updated_at", "2019-04-30 08:44:48.324430"]]
+  [1m[35m (26.5ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/employees/1
+Completed 302 Found in 71ms (ActiveRecord: 41.8ms)
+
+
+Started GET "/employees/1" for ::1 at 2019-04-30 17:44:48 +0900
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEmployee Load (2.2ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering employees/show.html.erb within layouts/application
+  Rendered employees/show.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 4897ms (Views: 4240.5ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/employees" for ::1 at 2019-04-30 17:45:11 +0900
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (1.9ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  Rendered employees/index.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 5572ms (Views: 5066.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/employees/new" for ::1 at 2019-04-30 17:45:20 +0900
+Processing by EmployeesController#new as HTML
+  Rendering employees/new.html.erb within layouts/application
+  Rendered employees/new.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 5474ms (Views: 4917.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/employees" for ::1 at 2019-04-30 17:45:41 +0900
+Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"m9nmPpA1gCDaq00QzVJakbpxCp3fWCcJKFJgYsI6C8qW/ZCIqUhstbR/DDRjMp/ughIIqtSU7E5ywt78k2UKcw==", "employee"=>{"emp_id"=>"10002", "name"=>"", "age"=>"", "address"=>"", "busho"=>""}, "commit"=>"保存"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEmployee Create (13.5ms)[0m  [1m[32mINSERT INTO "employees" ("emp_id", "name", "address", "busho", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["emp_id", "10002"], ["name", ""], ["address", ""], ["busho", ""], ["created_at", "2019-04-30 08:45:42.561780"], ["updated_at", "2019-04-30 08:45:42.561780"]]
+  [1m[35m (32.9ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/employees/2
+Completed 302 Found in 68ms (ActiveRecord: 46.6ms)
+
+
+Started GET "/employees/2" for ::1 at 2019-04-30 17:45:42 +0900
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mEmployee Load (11.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering employees/show.html.erb within layouts/application
+  Rendered employees/show.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 5505ms (Views: 4908.2ms | ActiveRecord: 11.1ms)
+
+
+Started GET "/employees/2/edit" for ::1 at 2019-04-30 17:45:53 +0900
+Processing by EmployeesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mEmployee Load (1.8ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering employees/edit.html.erb within layouts/application
+  Rendered employees/edit.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 6793ms (Views: 6261.3ms | ActiveRecord: 1.8ms)
+
+
+Started PATCH "/employees/2" for ::1 at 2019-04-30 17:47:00 +0900
+Processing by EmployeesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"77nHt13kP2xl6lLdNRr8bQ3JsV3fRhM0p4zRazQrSiDinbEBZJnT+Qs+E/mbejkSNaqzatSK2HP9HG/1ZXRLmQ==", "employee"=>{"emp_id"=>"10002", "name"=>"伊藤レイルズ", "age"=>"25", "address"=>"", "busho"=>"開発部"}, "commit"=>"保存", "id"=>"2"}
+  [1m[36mEmployee Load (2.0ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEmployee Update (9.7ms)[0m  [1m[33mUPDATE "employees" SET "name" = ?, "age" = ?, "busho" = ?, "updated_at" = ? WHERE "employees"."id" = ?[0m  [["name", "伊藤レイルズ"], ["age", 25], ["busho", "開発部"], ["updated_at", "2019-04-30 08:47:00.989429"], ["id", 2]]
+  [1m[35m (34.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/employees/2
+Completed 302 Found in 80ms (ActiveRecord: 46.2ms)
+
+
+Started GET "/employees/2" for ::1 at 2019-04-30 17:47:01 +0900
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mEmployee Load (2.0ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering employees/show.html.erb within layouts/application
+  Rendered employees/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 4664ms (Views: 4248.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/employees" for ::1 at 2019-04-30 17:47:11 +0900
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (1.9ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  Rendered employees/index.html.erb within layouts/application (13.9ms)
+Completed 200 OK in 5611ms (Views: 5118.0ms | ActiveRecord: 1.9ms)
+
+
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from load at C:/Ruby24-x64/bin/rake:23)
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: Leaving `ActiveRecord::ConnectionAdapters::SQLite3Adapter.represent_boolean_as_integer`
+set to false is deprecated. SQLite databases have used 't' and 'f' to serialize
+boolean values and must have old data converted to 1 and 0 (its native boolean
+serialization) before setting this flag to true. Conversion can be accomplished
+by setting up a rake task which runs
+
+  ExampleModel.where("boolean_column = 't'").update_all(boolean_column: 1)
+  ExampleModel.where("boolean_column = 'f'").update_all(boolean_column: 0)
+
+for all models and all boolean columns, after which the flag must be set to
+true by adding the following to your application.rb file:
+
+  Rails.application.config.active_record.sqlite3.represent_boolean_as_integer = true
+ (called from instance_eval at C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/activesupport-5.2.3/lib/active_support/lazy_load_hooks.rb:71)
+Started GET "/" for ::1 at 2019-04-30 21:29:27 +0900
+Processing by RoutesController#index as HTML
+  Rendering routes/index.html.erb within layouts/application
+  Rendered routes/index.html.erb within layouts/application (49.3ms)
+Completed 200 OK in 14366ms (Views: 13931.0ms)
+
+
+Started GET "/employees" for ::1 at 2019-04-30 21:30:01 +0900
+Started GET "/employees" for ::1 at 2019-04-30 21:30:01 +0900
+Processing by EmployeesController#index as HTML
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (81.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  [1m[36mEmployee Load (17.3ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  Rendered employees/index.html.erb within layouts/application (343.2ms)
+  Rendered employees/index.html.erb within layouts/application (431.7ms)
+Completed 500 Internal Server Error in 6799ms (ActiveRecord: 25.8ms)
+
+
+  
+ActionView::Template::Error (can't add a new key into hash during iteration):
+    2: <html>
+    3: <head>
+    4:   <title>MiyatsukoTest1</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+  
+app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__97128741_84828980'
+Started GET "/employees" for ::1 at 2019-04-30 21:31:04 +0900
+Processing by EmployeesController#index as HTML
+Completed 200 OK in 77143ms (Views: 74085.1ms | ActiveRecord: 113.0ms)
+
+
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (13.4ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  Rendered employees/index.html.erb within layouts/application (71.7ms)
+Completed 200 OK in 121226ms (Views: 120777.0ms | ActiveRecord: 13.4ms)
+
+
+Started GET "/employees/new" for ::1 at 2019-04-30 21:34:11 +0900
+Processing by EmployeesController#new as HTML
+  Rendering employees/new.html.erb within layouts/application
+  Rendered employees/new.html.erb within layouts/application (280.5ms)
+Completed 200 OK in 5763ms (Views: 5248.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/employees" for ::1 at 2019-04-30 21:35:19 +0900
+Processing by EmployeesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NWeAvT12qZEy2x8ZRQ2zZwBRqTNKAy4r8cgLv6+2Djd+qv21vv5S6Ls/bWtIaav6YhIUcSPd7Wf6ey3osj9qMQ==", "employee"=>{"emp_id"=>"10003", "name"=>"谷本　聡", "age"=>"62", "address"=>"", "busho"=>"開発部"}, "commit"=>"保存"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mEmployee Create (9.9ms)[0m  [1m[32mINSERT INTO "employees" ("emp_id", "name", "age", "address", "busho", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["emp_id", "10003"], ["name", "谷本　聡"], ["age", 62], ["address", ""], ["busho", "開発部"], ["created_at", "2019-04-30 12:35:19.887607"], ["updated_at", "2019-04-30 12:35:19.887607"]]
+  [1m[35m (32.3ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/employees/3
+Completed 302 Found in 79ms (ActiveRecord: 42.5ms)
+
+
+Started GET "/employees/3" for ::1 at 2019-04-30 21:35:19 +0900
+Processing by EmployeesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mEmployee Load (2.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering employees/show.html.erb within layouts/application
+  Rendered employees/show.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 5264ms (Views: 4698.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/employees" for ::1 at 2019-04-30 21:35:30 +0900
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (1.9ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  Rendered employees/index.html.erb within layouts/application (14.3ms)
+Completed 200 OK in 5588ms (Views: 5119.4ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for ::1 at 2019-04-30 21:35:48 +0900
+Processing by RoutesController#index as HTML
+  Rendering routes/index.html.erb within layouts/application
+  Rendered routes/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 5607ms (Views: 5136.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/employees" for ::1 at 2019-04-30 21:36:16 +0900
+Processing by EmployeesController#index as HTML
+  Rendering employees/index.html.erb within layouts/application
+  [1m[36mEmployee Load (2.0ms)[0m  [1m[34mSELECT "employees".* FROM "employees"[0m
+  Rendered employees/index.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 5367ms (Views: 4922.2ms | ActiveRecord: 2.0ms)
+
+
